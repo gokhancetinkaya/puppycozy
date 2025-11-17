@@ -1,0 +1,299 @@
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+#navbar {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("../img/PuppyCozy.png") center / contain no-repeat;
+  display: block;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  background: #fff;
+}
+
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Mobile video adjustments */
+@media (max-width: 768px) {
+  #hero-video {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+/* Color Gallery */
+.color-gallery {
+  background: #fff;
+}
+
+.color-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Info Sections */
+.info-section {
+  background: #ffffff;
+}
+
+.info-section .row {
+  background: #ffffff;
+}
+
+.info-media {
+  padding: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.info-media img,
+.info-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info-text {
+  padding: 8% 10%;
+}
+
+.info-title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.info-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Feature Banner */
+.feature-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-banner .col {
+  position: relative;
+}
+
+.feature-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f8f9fa;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  width: 90%;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Closing Section */
+.closing-section {
+  background: #fff;
+}
+
+.closing-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* About Page Styles */
+.about-section {
+  padding: 60px 20px 60px;
+  min-height: 70vh;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}
+
+.signature {
+  font-style: italic;
+  margin-top: 2rem;
+  color: #666;
+}
+
+/* Responsive Typography */
+@media (max-width: 992px) {
+  .info-title {
+    font-size: 1.5rem;
+  }
+  
+  .info-text {
+    padding: 6% 8%;
+  }
+  
+  .banner-text {
+    font-size: 2.5rem;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-text {
+    padding: 8% 6%;
+  }
+  
+  .info-text p {
+    font-size: 0.95rem;
+  }
+  
+  .banner-text {
+    font-size: 1.75rem;
+  }
+  
+  .about-section {
+    padding: 100px 15px 40px;
+  }
+  
+  .about-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    width: 120px;
+    height: 40px;
+  }
+  
+  .info-title {
+    font-size: 1.2rem;
+  }
+  
+  .info-text {
+    padding: 6% 5%;
+  }
+  
+  .banner-text {
+    font-size: 1.35rem;
+  }
+  
+  .about-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-content {
+    font-size: 0.95rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve video loading */
+video {
+  background: #000;
+}
+
+/* Accessibility improvements */
+a:focus,
+button:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer-basic {
+    display: none;
+  }
+  
+  video {
+    display: none;
+  }
+}
